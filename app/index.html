@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>tinypizzaserver</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div class="formContainer"></div>
+        <form class="blogInputs">
+          <input type="text" name="name" class="nameInput" placeholder="Name"><br>
+          <input type="text" name="date" class="dateInput" placeholder="Date"><br>
+          <input type="text" name="blogTitle" class="titleInput" placeholder="Blog title"></br>
+          <input type="textarea" name="blogPost" class="post" placeholder="Blog post here"></br>
+          <button class="addBlog">Add Blog</button>
+        </form>
+    <ul class="blogPostsContainer">
+      <script type="text/template" id="blogPostTemplate">
+        <li>
+          <p>Name: <%= name %></p>
+          <p>Date: <%= date %></p>
+          <p>Blog Title: <%= blogTitle %></p>
+          <p>Blog: <%= blogPost %></p>
+          <button class="remove">X</button>
+          <button class="edit">Edit</button>
+        </li>
+      </script>
+    </ul><!-- end blogPosts -->
+
+
+
+
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
