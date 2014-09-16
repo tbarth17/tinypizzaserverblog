@@ -1,6 +1,3 @@
-
-
-
 $(function(){
 
 function renderTemplate(templateId, container, model){
@@ -15,14 +12,13 @@ var $nameVar = $('.nameInput');
 var $dateVar = $('.dateInput');
 var $blogTitleVar = $('.titleInput');
 var $postVar = $('.post');
-
+var $container = $('.blogPostsContainer');
 
 
 $.ajax( {
    type: "GET",
    url: "http://tiny-pizza-server.herokuapp.com/collections/blogPosts2",
    success: function(data) {
-     console.log(data);
      _.each(data, function(post) {
        var renderVars = {
          name: post.name,
@@ -59,5 +55,15 @@ $.ajax( {
      alert('Error Saving New Blog Posts');
       }
     });
+
+$container.delegate('.remove', 'click', function() {
+      var idNum = $(this).attr('id');
+      console.log(idNum);
+  $ajax( {
+    type: "DELETE",
+    url: "http://tiny-pizza-server.herokuapp.com/collections/blogPosts2"+idNum
+  });
+});
+
   });
 });
