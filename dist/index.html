@@ -14,8 +14,29 @@
     <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
+
     <div class="formContainer"></div>
-      <script type="text/template" id="formContainerScript"></script>
+        <form class="blogInputs">
+          <input type="text" name="name" class="nameInput" placeholder="Name"><br>
+          <input type="text" name="date" class="dateInput" placeholder="Date"><br>
+          <input type="text" name="blogTitle" class="titleInput" placeholder="Blog title"></br>
+          <input type="textarea" name="blogPost" class="post" placeholder="Blog post here"></br>
+          <button class="addBlog">Add Blog</button>
+        </form>
+    <ul class="blogPostsContainer">
+      <script type="text/template" id="blogPostTemplate">
+        <li>
+          <p>Name: <%= name %></p>
+          <p>Date: <%= date %></p>
+          <p>Blog Title: <%= blogTitle %></p>
+          <p>Blog: <%= blogPost %></p>
+          <button class="remove" data-id="<%= _id %>">X</button>
+          <button class="edit">Edit</button>
+        </li>
+      </script>
+    </ul><!-- end blogPosts -->
+
+
 
 
 

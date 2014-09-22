@@ -15,6 +15,8 @@ var $postVar = $('.post');
 var $container = $('.blogPostsContainer');
 
 
+//$.ajax("http://tiny-pizza-server.herokuapp.com/collections/blogPosts2", {type: 'POST'}).done(function)
+
 $.ajax( {
    type: "GET",
    url: "http://tiny-pizza-server.herokuapp.com/collections/blogPosts2",
